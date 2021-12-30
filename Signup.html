@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Document</title>
+</head>
+<body>
+    <div>
+        <form className='container mx-2 md:p-2 border border-gray-300 h-[380px] rounded-lg bg-white flex flex-col items-center justify-center ' onSubmit={handleSubmit}>
+
+            <div className='flex'>
+
+                <input placeholder='First Name' className=' border border-gray-400  items-center justify-center px-2 py-3 m-3 flex rounded-md font-mono' value={Firstname} required={true} name="Firstname" onChange={handleChange} type='text' />
+
+                <input placeholder='Last Name' className=' border border-gray-400  items-center justify-center px-2 py-3 m-3 flex rounded-md font-mono' value={Secondname} required={true} name="Secondname" onChange={handleChange} type='text' />
+
+            </div>
+
+
+            <div className='w-[100%] px-3 flex flex-col items-center justify-center '>
+                <input placeholder=' E-mail example:leo@gmail.com' className=' border border-gray-400 w-[100%]   items-center justify-center px-2 py-3 my-3  flex rounded-md font-mono' value={email} onChange={handleChange} type='email' required={true} name="email" />
+
+                <input placeholder='Password' className='py-3 px-2 border border-gray-400 w-[100%]   items-center justify-center  my-3  flex rounded-md font-mono  ' name="password" value={password} onChange={handleChange} type='text' required={true} />
+            </div>
+
+
+
+
+
+            <div className='w-[100%] my-2 px-4 flex  items-center justify-center' >
+                <button type='submit' className='p-3 w-[100%] font-bold disabled:bg-indigo-400 rounded-md bg-indigo-700 hover:bg-indigo-500 hover:transition-all text-white text-lg ' id='SignupButton' disabled={!Firstname||!Secondname||!email||!password?true:false}>Sign up</button>
+            </div>
+            <h1 className='w-[100%] text-center text-gray-800  font-mono p-1 my-1 '>Already have a account?<a className=' text-indigo-700 hover:underline cursor-pointer ' >Login!</a></h1>
+
+        </form>
+    </div>
+</body>
+</html>
